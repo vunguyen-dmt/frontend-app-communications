@@ -62,7 +62,6 @@ const messages = defineMessages({
     description: 'A set of instructions to give users a heads up about the formatting of the email they are about to send',
   },
   bulkEmailInstructionsCaution: { id: 'bulk.email.instructions.caution', defaultMessage: 'Caution!' },
-
   bulkEmailInstructionsCautionMessage: {
     id: 'bulk.email.instructions.caution.message.new.email',
     defaultMessage:
@@ -85,7 +84,7 @@ const messages = defineMessages({
     description: 'An Error message located under the submit button for the email form. Visible only on a failure.',
   },
   bulkEmailFormSuccess: {
-    id: 'bilk.email.form.success',
+    id: 'bulk.email.form.success',
     defaultMessage: 'Email successfully created',
   },
   bulkEmailFormScheduledSuccess: {

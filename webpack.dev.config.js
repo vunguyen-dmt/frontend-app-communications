@@ -25,5 +25,7 @@ const webpack5esmInteropRule = {
 const otherRules = config.module.rules;
 
 config.module.rules = [webpack5esmInteropRule, ...otherRules];
-
+config['devServer']['host'] = process.env.HOST || '0.0.0.0';
+config['devServer']['port'] = process.env.PORT || 8080;
+config['devServer']['https'] = true;
 module.exports = config;
