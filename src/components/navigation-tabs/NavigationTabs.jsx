@@ -2,21 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Nav } from '@edx/paragon';
+import './NavigationTabs.scss';
 
 export default function NavigationTabs(props) {
   const { tabData } = props;
 
   return (
-    <div className="py-4">
-      <Nav variant="tabs" defaultActiveKey="Instructor">
-        {tabData && tabData.map(tab => (
-          <Nav.Item key={tab.tab_id}>
-            <Nav.Link eventKey={tab.title} href={tab.url}>
-              {tab.title}
-            </Nav.Link>
-          </Nav.Item>
-        ))}
-      </Nav>
+    <div className="mt-3 navigation-tab-bordered-bottom ">
+      <div className="container-xl">
+        <Nav variant="tabs" defaultActiveKey="Instructor">
+          {tabData && tabData.map(tab => (
+            <Nav.Item key={tab.tab_id}>
+              <Nav.Link eventKey={tab.title} href={tab.url}>
+                {tab.title}
+              </Nav.Link>
+            </Nav.Item>
+          ))}
+        </Nav>
+      </div>
     </div>
   );
 }

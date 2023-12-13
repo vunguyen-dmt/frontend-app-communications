@@ -9,7 +9,7 @@ const messages = defineMessages({
 
   bulkEmailScheduledEmailsTableError: {
     id: 'bulk.email.scheduled.emails.table.error',
-    defaultMessage: 'An error occured while retrieving scheduled email information. Please try again later.',
+    defaultMessage: 'An error occurred while retrieving scheduled email information. Please try again later.',
     description: 'An error message that shows if the app is unable to display scheduled emails in the table',
   },
   bulkEmailScheduledEmailsTableSendDate: {
