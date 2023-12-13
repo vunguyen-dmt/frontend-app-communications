@@ -14,6 +14,11 @@ jest.mock('@edx/frontend-platform/react/hooks', () => ({
   ...jest.requireActual('@edx/frontend-platform/react/hooks'),
   useTrackColorSchemeChoice: jest.fn(),
 }));
+
+jest.mock('@edx/frontend-platform/react/hooks', () => ({
+  ...jest.requireActual('@edx/frontend-platform/react/hooks'),
+  useTrackColorSchemeChoice: jest.fn(),
+}));
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({

@@ -59,18 +59,20 @@ export default function PageContainer(props) {
   if (courseMetadata) {
     return (
       <CourseMetadataContext.Provider value={courseMetadata}>
-        <Header
-          className="learning-header"
-          courseOrg={courseMetadata.org}
-          courseNumber={courseMetadata.number}
-          courseTitle={courseMetadata.title}
-        />
-        <div className="pb-3 container">
-          <main>
-            {children}
-          </main>
-        </div>
-        <Footer />
+        <>
+          <Header
+            className="learning-header"
+            courseOrg={courseMetadata.org}
+            courseNumber={courseMetadata.number}
+            courseTitle={courseMetadata.title}
+          />
+          <div className="pb-3 container">
+            <main>
+              {children}
+            </main>
+          </div>
+          <Footer />
+        </>
       </CourseMetadataContext.Provider>
     );
   }

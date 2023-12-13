@@ -8,7 +8,7 @@ import { AppProvider, AuthenticatedPageRoute, ErrorPage } from '@edx/frontend-pl
 import ReactDOM from 'react-dom';
 
 import { Helmet } from 'react-helmet';
-import { Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import messages from './i18n';
 
 import './index.scss';
@@ -21,13 +21,18 @@ subscribe(APP_READY, () => {
       <Helmet>
         <link rel="shortcut icon" href={getConfig().FAVICON_URL} type="image/x-icon" />
       </Helmet>
-      <Switch>
-        <AuthenticatedPageRoute path="/courses/:courseId/bulk_email">
-          <PageContainer>
-            <BulkEmailTool />
-          </PageContainer>
-        </AuthenticatedPageRoute>
-      </Switch>
+      <Routes>
+        <Route
+          path="/courses/:courseId/bulk_email"
+          element={(
+            <AuthenticatedPageRoute>
+              <PageContainer>
+                <BulkEmailTool />
+              </PageContainer>
+            </AuthenticatedPageRoute>
+          )}
+        />
+      </Routes>
     </AppProvider>,
     document.getElementById('root'),
   );
