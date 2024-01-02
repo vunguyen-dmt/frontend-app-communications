@@ -55,7 +55,7 @@ describe('BulkEmailScheduledEmailsTable', () => {
       .reply(500, { response: 500 });
     render(renderBulkEmailScheduledEmailsTable());
     expect(
-      await screen.findByText('An error occured while retrieving scheduled email information. Please try again later.'),
+      await screen.findByText('An error occurred while retrieving scheduled email information. Please try again later.'),
     ).toBeTruthy();
   });
 

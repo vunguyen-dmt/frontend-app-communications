@@ -43,6 +43,7 @@ subscribe(APP_INIT_ERROR, (error) => {
 });
 
 initialize({
+  messages,
   handlers: {
     config: () => {
       mergeConfig(

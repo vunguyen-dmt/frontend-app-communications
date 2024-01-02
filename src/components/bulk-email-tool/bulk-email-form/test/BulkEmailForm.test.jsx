@@ -91,7 +91,7 @@ describe('bulk-email-form', () => {
     fireEvent.click(screen.getByText('Send email'));
     expect(await screen.findByRole('button', { name: /continue/i })).toBeInTheDocument();
     fireEvent.click(await screen.findByRole('button', { name: /continue/i }));
-    expect(await screen.findByText('An error occured while attempting to send the email.')).toBeInTheDocument();
+    expect(await screen.findByText('An error occurred while attempting to send the email.')).toBeInTheDocument();
   });
   test('Checking "All Learners" disables each learner group', async () => {
     render(renderBulkEmailForm());
